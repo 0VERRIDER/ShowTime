@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" prefHeight="763.0" prefWidth="1159.0"
+            style="-fx-background-color: #050404ff;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx"
+            fx:controller="showtime.SignupController">
+    <children>
+        <Polygon fill="#050404" layoutX="217.0" layoutY="184.0"
+                 points="-222.60000610351562, -184.0, 242.73336791992188, 579.2000122070312, 389.93328857421875, -184.0"
+                 stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0"/>
+        <Polygon fill="#050404" layoutX="227.0" layoutY="194.0"
+                 points="-227.0, -194.0, 232.73336791992188, 569.0, -227.0, 569.0" stroke="BLACK" strokeType="INSIDE"
+                 strokeWidth="0.0"/>
+        <VBox alignment="CENTER" layoutX="118.0" layoutY="462.0" prefHeight="133.0" prefWidth="285.0" spacing="20.0"
+              AnchorPane.bottomAnchor="169.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="756.0"
+              AnchorPane.topAnchor="462.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="367.0"
+                       text="Have an account?" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font size="25.0"/>
+                    </font>
+                </Label>
+                <JFXButton id="login" fx:id="login" alignment="CENTER" onAction="#loginAction" prefHeight="46.0"
+                           prefWidth="155.0" style="-fx-border-color: #fff; -fx-text-fill: #fff;" text="Log In"
+                           textFill="WHITE">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </JFXButton>
+            </children>
+            <padding>
+                <Insets top="5.0"/>
+            </padding>
+        </VBox>
+        <VBox alignment="CENTER" layoutX="607.0" layoutY="145.0" prefHeight="352.0" prefWidth="434.0" spacing="50.0">
+            <children>
+                <JFXTextField id="text" fx:id="username" focusColor="WHITE" prefHeight="26.0" prefWidth="450.0"
+                              promptText="Username" stylesheets="@seat.css" unFocusColor="WHITE">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </JFXTextField>
+                <JFXTextField id="text" fx:id="email" focusColor="WHITE" promptText="Email address"
+                              stylesheets="@seat.css" unFocusColor="WHITE">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </JFXTextField>
+                <JFXPasswordField id="text" fx:id="password1" focusColor="WHITE" promptText="Password"
+                                  stylesheets="@seat.css" unFocusColor="WHITE">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </JFXPasswordField>
+                <JFXPasswordField id="text" fx:id="password2" focusColor="WHITE" promptText="Confirm password"
+                                  stylesheets="@seat.css" unFocusColor="WHITE">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </JFXPasswordField>
+                <HBox fx:id="warning" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Images/alert.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="message" prefHeight="30.0" prefWidth="425.0" text="Passwords don't match."
+                               textFill="#050404">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="20.0"/>
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="180.0">
+                    <children>
+                        <JFXButton id="signup" fx:id="signup" onAction="#signupAction" prefHeight="46.0"
+                                   prefWidth="155.0" stylesheets="@styles.css" text="Sign Up">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </JFXButton>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox alignment="TOP_CENTER" layoutX="59.0" layoutY="150.0" prefHeight="325.0" prefWidth="384.0" spacing="30.0">
+            <children>
+                <ImageView fitHeight="169.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/logo-white.png"/>
+                    </image>
+                </ImageView>
+                <Label alignment="CENTER" text="Show Time" textFill="WHITE">
+                    <font>
+                        <Font name="AristaProAlternate" size="56.0"/>
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <ImageView fx:id="close" fitHeight="17.0" fitWidth="17.0" layoutX="1105.0" layoutY="25.0"
+                   onMouseClicked="#exitApplication" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+            <image>
+                <Image url="@../Images/path2138.png"/>
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
