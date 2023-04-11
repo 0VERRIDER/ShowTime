@@ -165,7 +165,7 @@ public class ShowformController implements Initializable {
 
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/seatpg2.fxml"));
-                Parent signinView = (Parent) loader.load();
+                Parent signinView = loader.load();
                 Scene movieScene = new Scene(signinView);
                 Stage window = (Stage) ((Node) e.getSource()).getScene().getWindow();
                 SeatpgController controller = loader.getController();

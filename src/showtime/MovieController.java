@@ -165,7 +165,7 @@ public class MovieController implements Initializable {
                         break;
                 }
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/info.fxml"));
-            Parent signinView = (Parent) loader.load();
+            Parent signinView = loader.load();
             Scene movieScene = new Scene(signinView);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             InfoController controller = loader.getController();

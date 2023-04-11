@@ -332,7 +332,7 @@ public class SeatpgController implements Initializable {
             }
         }
         if (j == 0) {
-            System.out.println("HouseFull");
+//            System.out.println("HouseFull");
         }
     }
 
@@ -395,7 +395,7 @@ public class SeatpgController implements Initializable {
             }
         }
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/ticket.fxml"));
-        Parent signinView = (Parent) loader.load();
+        Parent signinView = loader.load();
         Scene movieScene = new Scene(signinView);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         TicketController controller = loader.getController();

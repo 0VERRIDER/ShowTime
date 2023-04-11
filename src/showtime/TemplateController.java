@@ -131,7 +131,7 @@ public class TemplateController implements Initializable {
             idTicket3 = 0;
         }
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/ticket.fxml"));
-        Parent signinView = (Parent) loader.load();
+        Parent signinView = loader.load();
         Scene movieScene = new Scene(signinView);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         TicketController controller = loader.getController();

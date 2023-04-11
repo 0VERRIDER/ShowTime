@@ -126,7 +126,7 @@ public class MovieformController implements Initializable {
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(TemplateController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        if (is_staff == false) {
+        if (!is_staff) {
             addMovie.setVisible(false);
             addShow.setVisible(false);
         }
@@ -160,7 +160,7 @@ public class MovieformController implements Initializable {
 
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/info.fxml"));
-                Parent signinView = (Parent) loader.load();
+                Parent signinView = loader.load();
                 Scene movieScene = new Scene(signinView);
                 Stage window = (Stage) ((Node) e.getSource()).getScene().getWindow();
                 InfoController controller = loader.getController();

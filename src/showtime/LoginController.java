@@ -130,7 +130,7 @@ public class LoginController implements Initializable {
                         FXMLLoader loader = null;
                         loader = new FXMLLoader(getClass().getResource("FXML/template2.fxml"));
                         TemplateController controller = loader.getController();
-                        mainView = (Parent) loader.load();
+                        mainView = loader.load();
                         Scene mainScene = new Scene(mainView);
                         Stage window = (Stage) ((Node) e.getSource()).getScene().getWindow();
                         window.setScene(mainScene);
